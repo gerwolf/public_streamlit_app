@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit.components.v1 import html
 import joblib
+from io import BytesIO
 import requests
 import pandas as pd
 import spotipy
