@@ -6,6 +6,7 @@ import requests
 import pandas as pd
 import spotipy
 import spotipy.oauth2 as oauth2
+import sklearn
 
 CLIENT_ID = st.secrets["CLIENT_ID"]
 CLIENT_SECRET = st.secrets["CLIENT_SECRET"]
