@@ -7,7 +7,7 @@ import spotipy
 import spotipy.oauth2 as oauth2
 
 CLIENT_ID = st.secrets["CLIENT_ID"])
-CLIENT_SECRET = st.secrets["CLIENT_SECRET"])
+CLIENT_SECRET = st.secrets["CLIENT_SECRET"]
 
 credentials = oauth2.SpotifyClientCredentials(
         client_id=CLIENT_ID,
