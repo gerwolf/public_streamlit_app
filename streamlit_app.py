@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit.components.v1 import html
 import joblib
 import requests
-from io import BytesIO
 import pandas as pd
 import spotipy
 import spotipy.oauth2 as oauth2
