@@ -6,9 +6,6 @@ import pandas as pd
 import spotipy
 import spotipy.oauth2 as oauth2
 
-CLIENT_ID = "797b13be9767402ea60f551c48b26098"
-CLIENT_SECRET = "be6265ddf46a463e943bac059b57e890"
-
 credentials = oauth2.SpotifyClientCredentials(
         client_id=CLIENT_ID,
         client_secret=CLIENT_SECRET)
