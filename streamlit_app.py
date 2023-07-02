@@ -21,7 +21,10 @@ spotify = spotipy.Spotify(client_credentials_manager=credentials)
 download_link = "https://drive.google.com/u/0/uc?id=1-9AQpKetdu_7Wkag6yMPMmeKUDII237b&export=download"
 response = requests.get(download_link)
 
-model = pickle.load(BytesIO(response.content))
+try:
+    model = pickle.load(BytesIO(response.content))
+except ValueError:
+    pass
 
 var_order =  ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'valence']
 
