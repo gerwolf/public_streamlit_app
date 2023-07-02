@@ -1,3 +1,4 @@
 joblib
 spotipy
 scikit-learn
+cloudpickle
