@@ -18,7 +18,7 @@ credentials = oauth2.SpotifyClientCredentials(
 spotify = spotipy.Spotify(client_credentials_manager=credentials)
 
 #model download-link
-download_link = "https://drive.google.com/u/0/uc?id=1Ago9sGE2X8AWI1I7399uWUMx-k7PJSNp&export=download"
+download_link = "https://drive.google.com/u/0/uc?id=16o3jlWLV-uEq5C4h6nav0NewHSs6djiM&export=download"
 response = requests.get(download_link)
 
 model = cloudpickle.load(BytesIO(response.content))
