@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit.components.v1 import html
-import joblib
+import pickle
 from io import BytesIO
 import requests
 import pandas as pd
@@ -20,7 +20,8 @@ spotify = spotipy.Spotify(client_credentials_manager=credentials)
 #model download-link
 download_link = "https://drive.google.com/u/0/uc?id=1-9AQpKetdu_7Wkag6yMPMmeKUDII237b&export=download"
 response = requests.get(download_link)
-model = joblib.load(BytesIO(response.content))
+
+model = pickle.load(BytesIO(response.content))
 
 var_order =  ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'valence']
 
