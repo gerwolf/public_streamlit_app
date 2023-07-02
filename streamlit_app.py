@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit.components.v1 import html
-import pickle
+import cloudpickle
 from io import BytesIO
 import requests
 import pandas as pd
@@ -18,13 +18,10 @@ credentials = oauth2.SpotifyClientCredentials(
 spotify = spotipy.Spotify(client_credentials_manager=credentials)
 
 #model download-link
-download_link = "https://drive.google.com/u/0/uc?id=1-9AQpKetdu_7Wkag6yMPMmeKUDII237b&export=download"
+download_link = "https://drive.google.com/u/0/uc?id=1Ago9sGE2X8AWI1I7399uWUMx-k7PJSNp&export=download"
 response = requests.get(download_link)
 
-try:
-    model = pickle.load(BytesIO(response.content))
-except ValueError:
-    pass
+model = cloudpickle.load(BytesIO(response.content))
 
 var_order =  ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'valence']
 
