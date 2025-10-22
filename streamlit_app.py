@@ -49,7 +49,20 @@ with st.form("spotify_form", clear_on_submit=True):
       iframe_text = f'<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
       st.components.v1.html(iframe_text, height = 160) # or height = 352
 
-      res = spotify.audio_features(track_id)[0]
+      # res = spotify.audio_features(track_id)[0]
+
+      res = {
+        "acousticness": 0.66,
+        "danceability": 0.18,
+        "energy": 0.83,
+        "instrumentalness": 0.00,
+        "liveness": 0.15,
+        "loudness": -0.04,
+        "speechiness": 0.05,
+        "tempo": 173,
+        "valence": 0.53,
+        }
+        
       sorted_dict = [{key: res[key] for key in var_order}] # need to provide a list for pd.DataFrame()
       X = pd.DataFrame(sorted_dict)
 
