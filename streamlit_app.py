@@ -9,11 +9,11 @@ import spotipy.oauth2 as oauth2
 import sklearn
 from typing import Optional
 
-def normalize_track_id(s: str) -> Optional[str]:
-    if not s:
-        return None
-    m = re.search(r'([A-Za-z0-9]{22})', s)
-    return m.group(1) if m else None
+# def normalize_track_id(s: str) -> Optional[str]:
+#     if not s:
+#         return None
+#     m = re.search(r'([A-Za-z0-9]{22})', s)
+#     return m.group(1) if m else None
 
 CLIENT_ID = st.secrets["CLIENT_ID"]
 CLIENT_SECRET = st.secrets["CLIENT_SECRET"]
