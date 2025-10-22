@@ -40,7 +40,7 @@ with st.form("spotify_form", clear_on_submit=True):
 
   if submit:
     # st.write(submit)
-    track_id = normalize_track_id(track_id)
+    # track_id = normalize_track_id(track_id)
           
     if track_id:
       st.success(f"Selected Track ID is: {track_id}")
